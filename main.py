@@ -1,7 +1,8 @@
 # Fake name generator. | ohusq | 21-8-23 : 22:39 AMSTERDAM
 
 # Importeer de bibioltheken
-import random as rnd
+import random     as rnd
+import subprocess as subprocess
 
 # Constructueer de getRandom class
 class getRandom():
@@ -48,8 +49,13 @@ class getRandom():
         except FileNotFoundError:
             getRandom().catch_error("last_names")
             
+
+# call Functie om het kort te houden.
+def sub_call(args: str) -> None:
+    subprocess.call(args, shell=True)
         
 if __name__ == "__main__":
+    subprocess.call("cls", shell=True)
     print("PHASE 1 | Success loading base file |")
     print("PHASE 2 | Loading                   | You can ignore the part under this line")
     print(f"PHASE 2 | Random name (first)       | {getRandom.first_name()}")
@@ -66,8 +72,9 @@ if __name__ == "__main__":
         fake_full_name   = fake_first_name + " " + fake_middle_name + " " + fake_last_name # Dit is dom.
         print("Your fake name has loaded")
         print(f"Your new name is: {fake_full_name}")
+        subprocess.call("pause", shell=True)
     elif use_middle_name.lower() == "no" or use_middle_name.lower() == "n":
-        print("You have pressed: yes")
+        print("You have pressed: no")
         fake_first_name  = getRandom.first_name().strip("\n")
         fake_last_name   = getRandom.last_name().strip("\n")
         fake_full_name   = fake_first_name + " " + fake_last_name # Dit is dom. 
