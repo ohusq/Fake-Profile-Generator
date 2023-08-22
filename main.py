@@ -70,6 +70,6 @@ if __name__ == "__main__":
         print("You have pressed: yes")
         fake_first_name  = getRandom.first_name().strip("\n")
         fake_last_name   = getRandom.last_name().strip("\n")
-        fake_full_name   = fake_first_name + " " + fake_last_name # Dit is dom.
+        fake_full_name   = fake_first_name + " " + fake_last_name # Dit is dom. 
         print("Your fake name has loaded")
         print(f"Your new name is: {fake_full_name}")
