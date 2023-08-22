@@ -73,3 +73,6 @@ if __name__ == "__main__":
         fake_full_name   = fake_first_name + " " + fake_last_name # Dit is dom. 
         print("Your fake name has loaded")
         print(f"Your new name is: {fake_full_name}")
+
+else:
+    print("\n\t\tDo not run this as a module!\n\t\tError type: Imported / Not using main.py")
