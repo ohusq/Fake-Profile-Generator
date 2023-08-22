@@ -43,7 +43,7 @@ class getRandom():
     def last_name() -> str:
         try:
             with getRandom.files().last_names as f:
-              lines = f.readlines() # Pakt alle lijnen (kan laggen) 
+              lines = f.readlines() # Pakt alle lijnen (kan laggen)
               return str(rnd.choice(lines))
         except FileNotFoundError:
             getRandom().catch_error("last_names")
